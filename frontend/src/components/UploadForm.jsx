@@ -15,7 +15,6 @@ const UploadForm = () => {
   
     const handleSubmit = (event) => {
       event.preventDefault();
-  
       const formData = new FormData();
   
       for (let i = 0; i < videos.length; i++) {
@@ -27,7 +26,7 @@ const UploadForm = () => {
       }
   
       axios
-        .post("/api/upload", formData, {
+        .post("localhost:4000/api/upload", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
